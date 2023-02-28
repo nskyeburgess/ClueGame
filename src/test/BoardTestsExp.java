@@ -12,13 +12,17 @@ import experiment.TestBoardCell;
 
 public class BoardTestsExp {
 	TestBoard board;
+	
+	
 	@BeforeEach
 	public void setUp() {
 		board=new TestBoard();
+		System.out.print("hello");
 	}
 
 	@Test
 	public void testAdjacency() {
+		setUp();
 		TestBoardCell cell= board.getCell(0,0);
 		Set<TestBoardCell> testList = cell.getAdjList();
 		Assert.assertTrue(testList.contains(board.getCell(1,0)));
@@ -27,6 +31,7 @@ public class BoardTestsExp {
 	}
 	@Test
 		public void testAdjacency1() {
+		setUp();
 			TestBoardCell cell = board.getCell(3, 3);
 			Set<TestBoardCell> testList = cell.getAdjList();
 			Assert.assertTrue(testList.contains(board.getCell(4,3)));
@@ -36,6 +41,7 @@ public class BoardTestsExp {
 	@Test
 	
 	public void testAdjacency2() {
+		setUp();
 		TestBoardCell cell= board.getCell(1, 3);
 		Set<TestBoardCell> testList = cell.getAdjList();
 		Assert.assertTrue(testList.contains(board.getCell(2,3)));
@@ -45,6 +51,7 @@ public class BoardTestsExp {
 	
 	@Test
 	public void testAdjacency3() {
+		setUp();
 		TestBoardCell cell= board.getCell(3, 0);
 		Set<TestBoardCell> testList = cell.getAdjList();
 		Assert.assertTrue(testList.contains(board.getCell(4,0)));
@@ -53,6 +60,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testAdjacency4() {
+		setUp();
 		TestBoardCell cell= board.getCell(2, 2);
 		Set<TestBoardCell> testList = cell.getAdjList();
 		Assert.assertTrue(testList.contains(board.getCell(3,2)));
@@ -61,7 +69,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(0, 0);
 		board.calcTargets(cell,3);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -75,7 +83,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal1() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(0, 3);
 		board.calcTargets(cell,6);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -88,7 +96,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal2() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(2,1);
 		board.calcTargets(cell,6);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -102,7 +110,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal3() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(3, 0);
 		board.calcTargets(cell,3);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -116,7 +124,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal4() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(1, 0);
 		board.calcTargets(cell,3);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -130,6 +138,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal5() {
+		setUp();
 		TestBoardCell cell = board.getCell(1, 2);
 		board.calcTargets(cell,3);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -143,7 +152,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsNormal6() {
-		
+		setUp();
 		TestBoardCell cell = board.getCell(0, 1);
 		board.calcTargets(cell,3);
 		Set<TestBoardCell>targets=board.getTargets();
@@ -157,6 +166,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsRoom() {
+		setUp();
 		TestBoardCell cell= board.getCell(0, 0);
 		board.getCell(1,0).setIsRoom(true);
 		board.getCell(0,1).setIsRoom(true);
@@ -173,6 +183,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsRoom1() {
+		setUp();
 		TestBoardCell cell= board.getCell(3, 1);
 		board.getCell(2,1).setIsRoom(true);
 		board.getCell(3,0).setIsRoom(true);
@@ -190,6 +201,7 @@ public class BoardTestsExp {
 	
 	@Test
 	public void testTargetsOccupied() {
+		setUp();
 		TestBoardCell cell= board.getCell(0, 0);
 		board.getCell(1,0).setOccupied(true);
 		board.getCell(0,1).setOccupied(true);
@@ -200,6 +212,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsOccupied1() {
+		setUp();
 		TestBoardCell cell= board.getCell(3, 3);
 		board.getCell(2,3).setOccupied(true);
 		board.getCell(3,2).setOccupied(true);
@@ -211,6 +224,7 @@ public class BoardTestsExp {
 	
 	@Test
 	public void testTargetsMixed() {
+		setUp();
 		board.getCell(0, 2).setOccupied(true);
 		board.getCell(1, 2).setIsRoom(true);
 		TestBoardCell cell =board.getCell(0, 3);
@@ -224,6 +238,7 @@ public class BoardTestsExp {
 	}
 	@Test
 	public void testTargetsMixed1() {
+		setUp();
 		board.getCell(0, 1).setOccupied(true);
 		board.getCell(1, 0).setIsRoom(true);
 		TestBoardCell cell =board.getCell(1, 1);
