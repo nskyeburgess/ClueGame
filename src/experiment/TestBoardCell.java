@@ -1,35 +1,39 @@
 package experiment;
 
-import java.util.Map;
 import java.util.Set;
 
 public class TestBoardCell {
-	
-	//constructor
-	
 	public TestBoardCell(int SingleCell) {
 		int row;
 		int column;
 	}
-
-	
 	 void addAdjacency(TestBoardCell.SingleCell);
 	 
-	 // returns the adjacency list for the cell
-	 public Set<TestBoardCell> getAdjList(TestBoardCell cell){
-		 Set<TestBoardCell> adjSet = new HashSet<TestBoardCell>();
-		 
-		 
-		 return adjSet;
+	 
+	 
+	 void setRoom(boolean room ) {
+	}
+	 
+	 boolean isRoom() {
+		 return false;
 	 }
 	 
-	 void setRoom(boolean);
+	 public void setOccupied(boolean occupied) {
+	}
 	 
-	 boolean isRoom();
-	 
-	 void setOccupied(boolean);
-	 
-	 boolean getOccupied();
+	 boolean getOccupied() {
+		return false;
+	}
+	
+	public void setIsRoom(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	public Set<TestBoardCell> getAdjList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 }
 
 

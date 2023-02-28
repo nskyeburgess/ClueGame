@@ -1,7 +1,5 @@
 package experiment;
 
-
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -45,8 +43,13 @@ public class TestBoard {
 		}
 	}
 	
+	private Set<TestBoardCell> getAdjList(TestBoardCell startCell) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	// returns the cell from the board at row,col
-	TestBoardCell getCell(int row, int col) {
+	public TestBoardCell getCell(int row, int col) {
 		TestBoardCell cell = null;
 		// set cell to row,col
 		
@@ -54,7 +57,7 @@ public class TestBoard {
 	}
 	
 	// gets targets created by calcTargets()
-	Set<TestBoardCell> getTargets() {
+	public Set<TestBoardCell> getTargets() {
 		
 		return null;
 	}
