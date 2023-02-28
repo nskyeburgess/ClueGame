@@ -3,11 +3,18 @@ package experiment;
 import java.util.Set;
 
 public class TestBoardCell {
-	public TestBoardCell(int SingleCell) {
-		int row;
-		int column;
+	private boolean occupied;
+	private int column;
+	private int row;
+	public TestBoardCell(int row,int column) {
+		this.row = row;
+		this.column = column;
+		this.occupied = true;
+		
 	}
-	 void addAdjacency(TestBoardCell.SingleCell);
+	 void addAdjacency(TestBoardCell cell) {
+		 
+	 }
 	 
 	 
 	 
