@@ -28,22 +28,22 @@ public class TestBoard {
 				
 				//check above
 				if(j - 1 >= 0 ) {
-					if(grid[i][j-1].getOccupied() == false)
+					//if(grid[i][j-1].getOccupied() == false)
 						grid[i][j].addAdjacency(grid[i][j-1]);
 				}
 				// check below
 				if(j + 1 < COLS) {
-					if(grid[i][j+1].getOccupied() == false)
+					//if(grid[i][j+1].getOccupied() == false)
 						grid[i][j].addAdjacency(grid[i][j+1]);
 				}
 				//check left
 				if(i - 1 >= 0) {
-					if(grid[i-1][j].getOccupied() == false)
+					//if(grid[i-1][j].getOccupied() == false)
 						grid[i][j].addAdjacency(grid[i-1][j]);
 				}
 				//check right
 				if(i + 1 < ROWS) {
-					if(grid[i+1][j].getOccupied() == false)
+					//if(grid[i+1][j].getOccupied() == false)
 						grid[i][j].addAdjacency(grid[i+1][j]);
 				}
 			}
