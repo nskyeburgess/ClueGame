@@ -32,40 +32,41 @@ public class BoardTestsExp {
 	@Test
 		public void testAdjacency1() {
 		setUp();
-			TestBoardCell cell = board.getCell(2, 2);
+			TestBoardCell cell = board.getCell(1, 2);
 			Set<TestBoardCell> testList = cell.getAdjList();
+			Assert.assertTrue(testList.contains(board.getCell(2,1)));
 			Assert.assertTrue(testList.contains(board.getCell(3,2)));
-			Assert.assertTrue(testList.contains(board.getCell(2,3)));
 			Assert.assertEquals(2,testList.size());
 	}
 	@Test
 	
 	public void testAdjacency2() {
 		setUp();
-		TestBoardCell cell= board.getCell(1, 2);
+		TestBoardCell cell= board.getCell(1, 1);
 		Set<TestBoardCell> testList = cell.getAdjList();
 		Assert.assertTrue(testList.contains(board.getCell(2,2)));
-		Assert.assertTrue(testList.contains(board.getCell(1,2)));
-		Assert.assertEquals(3,testList.size()); // 2
+		Assert.assertEquals(1,testList.size()); // 2
 	}
 	
 	@Test
 	public void testAdjacency3() {
 		setUp();
-		TestBoardCell cell= board.getCell(2, 0);
+		TestBoardCell cell= board.getCell(2, 1);
 		Set<TestBoardCell> testList = cell.getAdjList();
-		Assert.assertTrue(testList.contains(board.getCell(3,0)));
 		Assert.assertTrue(testList.contains(board.getCell(2,1)));
+		Assert.assertTrue(testList.contains(board.getCell(3,2)));
 		Assert.assertEquals(2,testList.size());
 	}
 	@Test
 	public void testAdjacency4() {
 		setUp();
-		TestBoardCell cell= board.getCell(1, 1);
+		TestBoardCell cell= board.getCell(2,2);
 		Set<TestBoardCell> testList = cell.getAdjList();
-		Assert.assertTrue(testList.contains(board.getCell(2,1)));
-		Assert.assertTrue(testList.contains(board.getCell(1,2)));
-		Assert.assertEquals(2,testList.size()); 
+		Assert.assertTrue(testList.contains(board.getCell(1,1)));
+		Assert.assertTrue(testList.contains(board.getCell(3,3)));
+		Assert.assertTrue(testList.contains(board.getCell(1,3)));
+		Assert.assertTrue(testList.contains(board.getCell(3,1)));
+		Assert.assertEquals(4,testList.size()); 
 	}
 	@Test
 	public void testTargetsNormal() {
