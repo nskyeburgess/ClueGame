@@ -14,8 +14,8 @@ public class TestBoardCell {
 		super();
 		this.row = row;
 		this.column = column;
-		this.occupied = true;
-		this.room = true;	
+		this.occupied = false;
+		this.room = false;	
 		
 	}
 	
@@ -37,13 +37,12 @@ public class TestBoardCell {
 	}
 	
 	// setter to add a cell to this cells adjacency list
-	void addAdjacency(TestBoardCell cell) {
-		
-		this.Cells.add(cell);
+	public void addAdjacency(TestBoardCell cell) {
+		this.Cells.add(cell);		
 	 }
 	 
 	
-	void setRoom(boolean r ) {
+	public void setRoom(boolean r ) {
 		 room = r;
 	}
 	 
