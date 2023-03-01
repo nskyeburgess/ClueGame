@@ -20,21 +20,31 @@ public class TestBoard {
 			for(int j = 0; j < COLS; j++) {
 				grid[i][j] = new TestBoardCell(i,j);
 				
+				}
+			}
+		
+		for(int i = 0; i < ROWS; i++) {
+			for(int j = 0; j < COLS; j++) {
+				
 				//check above
-				if(j - 1 >= 0) {
-					grid[i][j].addAdjacency(grid[i][j-1]);
+				if(j - 1 >= 0 ) {
+					if(grid[i][j-1].getOccupied() == false)
+						grid[i][j].addAdjacency(grid[i][j-1]);
 				}
 				// check below
 				if(j + 1 < COLS) {
-					grid[i][j].addAdjacency(grid[i][j+1]);
+					if(grid[i][j+1].getOccupied() == false)
+						grid[i][j].addAdjacency(grid[i][j+1]);
 				}
 				//check left
 				if(i - 1 >= 0) {
-					grid[i][j].addAdjacency(grid[i-1][j]);
+					if(grid[i-1][j].getOccupied() == false)
+						grid[i][j].addAdjacency(grid[i-1][j]);
 				}
 				//check right
 				if(i + 1 < ROWS) {
-					grid[i][j].addAdjacency(grid[i+1][j]);
+					if(grid[i+1][j].getOccupied() == false)
+						grid[i][j].addAdjacency(grid[i+1][j]);
 				}
 			}
 		}
@@ -77,7 +87,7 @@ public class TestBoard {
 				targets.add(grid[i][j]);
 			}
 			else {
-				findAllTargets(adjC, pathlength -1);
+				findAllTargets(grid[i][j], pathlength -1);
 			}
 			visited.remove(grid[i][j]);
 			
