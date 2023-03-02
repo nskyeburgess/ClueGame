@@ -1,0 +1,15 @@
+/Room and room cards
+
+New Girl Clue
+Room, Jess's Room, J
+Room, Winston's Room,W
+Room, Nick's Room,N
+Room, Shmmit's Room,S
+Room, Living Room,L
+Room, Kitchen,K
+Room, Bathroom,B
+Room, Roof top,R
+Room, Ceci's apartment,C
+//
+Space,Unused, X
+Hallway,H
