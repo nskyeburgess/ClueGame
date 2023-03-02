@@ -39,6 +39,8 @@ public class TestBoardCell {
 	// setter to add a cell to this cells adjacency list
 	void addAdjacency(TestBoardCell cell) {
 		 this.Cells.add(cell);
+		 
+		 
 	 }
 	 
 	
