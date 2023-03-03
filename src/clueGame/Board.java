@@ -56,21 +56,21 @@ public class Board {
 		// TODO Auto-generated method stub
 		
 	}
-	public Object getRoom(char c) {
+	public Room getRoom(char c) {
 		// TODO Auto-generated method stub
-		return null;
+		return new Room();
 	}
-	public Object getNumColumns() {
+	public int getNumColumns() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
-	public Object getNumRows() {
+	public int getNumRows() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 	public BoardCell getCell(int i, int j) {
 		// TODO Auto-generated method stub
-		return null;
+		return new BoardCell(0, 0);
 	}
 	public Room getRoom(BoardCell cell) {
 		// TODO Auto-generated method stub

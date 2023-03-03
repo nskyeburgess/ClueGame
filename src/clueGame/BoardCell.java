@@ -16,7 +16,7 @@ public class BoardCell {
 	char inital='b';
 	private Set<BoardCell> Cells=new HashSet<BoardCell>();
 	
-	public void BoardCell(int row,int column) {
+	public BoardCell(int row,int column) {
 		this.row = row;
 		this.column = column;
 		this.occupied = false;

@@ -36,7 +36,7 @@ public Set<BoardCell> BoardCell() {
 	}
 	public Object getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 	public clueGame.BoardCell getLabelCell() {
 		// TODO Auto-generated method stub
