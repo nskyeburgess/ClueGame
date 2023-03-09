@@ -1,50 +1,89 @@
 package clueGame;
 
 import java.util.HashSet;
+
 import java.util.Set;
 
+import clueGame.Board;
+
+import clueGame.BoardCell;
+
 public class Room {
-	private Set<BoardCell> Cells=new HashSet<BoardCell>();
-	
+
+
 	private String name;
-	
-	
-public Set<BoardCell> centerCell() {
-		
-	return Cells;
-}
-public Set<BoardCell> BoardCell() {
-	
-	return Cells;
-}
-	
+
+	private BoardCell labelCell;
+
+	private BoardCell centerCell;
+
+	public String toString() {
+
+		return name;
+
+	}
+
+
 	boolean isRoom() {
-		 return isRoom();
-	 }
-	 
-	 public void setOccupied(boolean occ) {
-		 boolean occupied = occ;
+
+		return true;
+
 	}
-	 
-	 boolean getOccupied() {
-		return getOccupied();
+
+	public void setOccupied(boolean occ) {
+
+		boolean occupied = occ;
+
 	}
-	
+
+	boolean getOccupied() {
+
+		return false;
+
+	}
+
 	public void setIsRoom(boolean b) {
+
 		boolean room = b;
-		
+
 	}
-	public Object getName() {
-		// TODO Auto-generated method stub
-		return "";
+
+	public String getName() {
+
+		//return "";
+
+		return name;
+
 	}
-	public clueGame.BoardCell getLabelCell() {
-		// TODO Auto-generated method stub
-		return null;
+
+	public void setName(String name) {
+
+		this.name = name;
+
 	}
-	public clueGame.BoardCell getCenterCell() {
-		// TODO Auto-generated method stub
-		return null;
+
+	public void setLabelCell(BoardCell lcell) {
+
+		labelCell = lcell;
+
+	}
+
+	public void getCenterCell(BoardCell ccell) {
+
+		centerCell = ccell;
+
+	}
+
+	public BoardCell getLabelCell() {
+
+		return labelCell;
+
+	}
+
+	public BoardCell getCenterCell() {
+
+		return centerCell;
+
 	}
 
 }
